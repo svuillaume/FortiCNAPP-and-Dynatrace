@@ -11,16 +11,29 @@ Show how **FortiCNAPP** (cloud-native security) and **Dynatrace** (full-stack ob
 
 ---
 
-## Demo Architecture
+## Demo Env 
 - **Workload:** Kubernetes cluster running a sample container app (OWASP Juicy Shop)
 - **FortiCNAPP:** Scans containers and workloads via agent or API connector.
 - **Dynatrace:** One agent per node/container to show metrics, traces, and AI problem detection.
 
-**Optional scenario:**  
-1. Deploy a vulnerable container.  
-2. FortiCNAPP detects security risk.  
-3. Dynatrace shows performance degradation.  
-4. Teams can prioritize fixes with **risk + impact context**.
+## Demo Architecture
+
+- **Workload:** Kubernetes cluster (can be OpenShift or EKS) with a sample app (like a microservices demo or e-commerce app).
+
+- **FortiCNAPP:** Integrated via agent (for CWPP) or API connector. Will show:
+  - Vulnerabilities per container/service
+  - Misconfigurations
+  - Compliance dashboard (CIS benchmark)
+
+- **Dynatrace:** One agent per node/container, showing:
+  - Transaction tracing
+  - Metrics and logs
+  - AI-detected anomalies
+
+**Outcomes**  
+1. FortiCNAPP detects security risk.  
+2. Dynatrace shows performance degradation.  
+3. Teams can prioritize fixes with **risk + impact context**.
 
 ---
 
